@@ -1,6 +1,26 @@
 # Sort the array from lowest to highest
 def sort(arr)
-  arr.sort
+
+  iLength = arr.length - 1
+
+  loop do 
+  	bNoSwap = true
+
+  	iLength.times do |i|
+
+  		if arr[i] > arr[i + 1]
+  			arr[i], arr[i + 1] = arr[i + 1], arr[i]
+  			bNoSwap = false
+  		end
+
+  	end
+
+  	break if bNoSwap
+  	
+  end
+
+  return arr
+
 end
 
 # Find the maximum 
